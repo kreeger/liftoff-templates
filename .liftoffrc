@@ -52,6 +52,6 @@ application_target_groups:
 unit_test_target_groups:
   - UnitTests:
     - <%= prefix %>AppDelegateSpec.m
-  - Support:
-    - UnitTests-Info.plist
-    - UnitTests-Prefix.pch
+    - Support:
+      - UnitTests-Info.plist
+      - UnitTests-Prefix.pch
