@@ -8,7 +8,6 @@
 author: Ben Kreeger
 configure_git: true
 warnings_as_errors: true
-install_todo_script: true
 enable_static_analyzer: true
 indentation_level: 4
 use_cocoapods: true
@@ -33,28 +32,26 @@ warnings:
   - CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF
 
 application_target_groups:
-  - <%= project_name %>:
+  - Classes:
     - Categories:
-    - Classes:
-      - Controllers:
-      - DataSources:
-      - Delegates:
-        - <%= prefix %>AppDelegate.h
-        - <%= prefix %>AppDelegate.m
-      - Models:
-      - ViewControllers:
-      - Views:
     - Constants:
-    - Resources:
-      - Images.xcassets
-      - Other-Sources:
-        - Info.plist
-        - Prefix.pch
-        - main.m
+    - Core:
+      - <%= prefix %>AppDelegate.h
+      - <%= prefix %>AppDelegate.m
+      - Prefix.pch
+      - main.m
+    - DataSources:
+    - Delegates:
+    - Models:
+    - ViewControllers:
+    - Views:
+  - Resources:
+    - Images.xcassets
+    - Info.plist
 
 unit_test_target_groups:
-  - Specs:
-    - Support:
-      - Specs-Info.plist
-      - Specs-Prefix.pch
-      - <%= prefix %>AppDelegateSpec.m
+  - UnitTests:
+    - <%= prefix %>AppDelegateSpec.m
+  - Support:
+    - UnitTests-Info.plist
+    - UnitTests-Prefix.pch

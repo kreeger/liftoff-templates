@@ -1,8 +1,5 @@
 //
-//  <%= prefix %>AppDelegate.m
-//  <%= project_name %>
-//
-//  Created by <%= author %> on <%= Time.now.strftime("%-m/%-d/%y") %>
+//  <%= project_name %> // <%= prefix %>AppDelegate.m
 //  Copyright (c) <%= Time.now.strftime('%Y') %> <%= company %>. All rights reserved.
 //
 
